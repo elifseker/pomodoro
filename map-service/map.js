@@ -8,7 +8,7 @@ if (GoogleMapsApiKey == null) {
     process.exit(1);
 }
 
-app.set('port', 8000);
+app.set('port', 8080);
 app.get('/mapimage', function (req, res) {
     let location = req.query.location
     const params = '?center=' + location + '&zoom=12&size=400x400&key=' + GoogleMapsApiKey
