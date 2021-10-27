@@ -19,47 +19,74 @@
 	<div class="container top-row">
 		<div class="row">
 			<div class="col region top-left">
-				<div class="card" style="width: 18rem;">
-					<div class="card-body">
-						<h2 class="time">11:11 AM</h2>
-						<h2 class="day">MONDAY</h2>
-						<h2 class="date">OCT 11</h2>
-
-					</div>
-				</div>
+				<h4 class="time">11:11 AM</h2>
+					<h4 class="day">Monday Oct 25</h2>
 			</div>
+			<div class="col region top-center "></div>
+			<div class="col region top-right">
+				<h4 class="temp">48 F</h2>
+					<h4 class="city">Redmond</h2>
+			</div>
+		</div>
+	</div>
+	<br>
 
-			<div class="col region float-right">
-				<div class="card" style="width: 18rem;">
-					<div class="card-body ">
-						<h2 class="image">cloudy</h2>
-						<h2 class="temp">48 F</h2>
-						<h2 class="city">REDMOND</h2>
 
+	<div class="col-sm-4 mx-auto justify-content-center text-center align-items-center">
+		<div class="card">
+			<div class="card-body">
+				<h5 class="card-header bg-transparent border-success">POMODORO TIMER</h5>
+
+				<div id="pomodoro">
+					<div id="clock">
+						<div id="timer">
+							<div id="title">Work Time</div>
+							<div id="countdown">
+								<span id="minutes">25</span>
+								<span id="seconds">00</span>
+							</div>
+							<div id="controls" class="reset">
+								<div id="start" class="btn btn-primary"> Start</div>
+								<div id="pause" class="btn btn-primary"> Pause</div>
+								<div id="resume" class="btn btn-primary"> Resume</div>
+							</div>
+							<div id="title">Break Time</div>
+							<div id="countdown">
+								<span id="minutes">5</span>
+								<span id="seconds">00</span>
+							</div>
+							<div id="controls" class="reset">
+								<div id="start" class="btn btn-primary"> Start</div>
+								<div id="pause" class="btn btn-primary"> Pause</div>
+								<div id="resume" class="btn btn-primary"> Resume</div>
+							</div>
+						</div>
 					</div>
-				</div>
 
+
+				</div>
 			</div>
 		</div>
 	</div>
 
-	<div class="row">
-		<div class="col-sm-6">
-			<div class="card">
-				<div class="card-body">
-					<h5 class="card-title">POMODORO TIMER</h5>
-					<p class="card-text"></p>
-					<a href="#" class="btn btn-primary">START</a>
+	<div class="col-md-8 mx-auto">
+		<div class="card">
+			<div class="card-body">
+				<div id="myDIV" class="header">
+					<h4 class="card-header bg-transparent border-success">TO DO LIST</h5>
+						<br>
+						<input type="text" id="myInput" placeholder="add new task..">
+						<span onclick="newElement()" class="btn btn-primary">Add</span>
+						<div>
+							<ul id="myUL">
+								<li>Workout</li>
+								<li class="checked">HW4</li>
+								<li>Grocery</li>
+								<li>Leetcode</li>
+							</ul>
+						</div>
 				</div>
-			</div>
-		</div>
-		<div class="col-sm-6">
-			<div class="card">
-				<div class="card-body">
-					<h5 class="card-title">TO DO LIST</h5>
-					<p class="card-text"></p>
-					<a href="#" class="btn btn-primary">ADD NEW TASK</a>
-				</div>
+
 			</div>
 		</div>
 	</div>
@@ -74,7 +101,7 @@
 			</blockquote>
 		</div>
 	</div>
-
+	<script src="app.js"></script>
 </body>
 
 </html>
