@@ -1,0 +1,16 @@
+{
+  "name": "pomodoro-service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "pomodoro.js",
+  "scripts": {
+    "start": "node pomodoro.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "request": "^2.88.2"
+  }
+}
