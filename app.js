@@ -54,4 +54,36 @@ function newElement() {
     }
 }
 
+// weather 
+//const api = "https://weather-api-361.herokuapp.com/zip?zip="
+//const api = "https://pomodoro-map.appspot.com/weather?location="
+const api = "http://localhost:8081/weather?location="
+document.addEventListener('DOMContentLoaded', getWeather);
+
+function getWeather() {
+    const weatherForm = document.querySelector('#weatherForm');
+    weatherForm.addEventListener('submit', function (event) {
+        let req = new XMLHttpRequest();
+        let cityInfo = document.getElementById('cityInfo').value
+        let URL = api + cityInfo
+        req.open('GET', URL, true);
+        req.setRequestHeader('Content-Type', 'application/json');
+        req.addEventListener('load', function () {
+            if (req.status >= 200 && req.status < 400) {
+                let response = JSON.parse(req.responseText);
+                //console.log(response)
+                let city = response.City
+                let temp = Math.round(response.Temp);
+                document.getElementById('weatherResult').textContent = city;
+                document.getElementById('weatherResult').textContent = temp + "℉";
+            } else {
+                console.log("Error in network request: " + req.statusText);
+            }
+        });
+        req.send(null);
+        event.preventDefault();
+    });
+}
+
 // timer
+

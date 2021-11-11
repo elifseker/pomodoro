@@ -13,24 +13,24 @@
 		crossorigin="anonymous"></script>
 	<link href="style.css" rel="stylesheet">
 
+
 </head>
 
 <body>
-	<div class="container top-row">
-		<div class="row">
-			<div class="col region top-left">
-				<h4 class="time">11:11 AM</h2>
-					<h4 class="day">Monday Oct 25</h2>
-			</div>
-			<div class="col region top-center "></div>
-			<div class="col region top-right">
-				<h4 class="temp">48 F</h2>
-					<h4 class="city">Redmond</h2>
-			</div>
+	<div class="container">
+		<div class="clearfix">
+			<h4 class="float-left">11:11 AM Monday Oct 25</h4>
+
+			<form class="form-inline" id="weatherForm">
+				<label for="cityInfo"></label>
+				<input type="text" name="cityInfo" id="cityInfo"
+					placeholder="Please enter a zipcode for today's weather...">
+				<button type="submit" class="btn btn-primary">Submit</button>
+				<span id="weatherResult"></span>
+			</form>
 		</div>
 	</div>
 	<br>
-
 
 	<div class="col-sm-4 mx-auto justify-content-center text-center align-items-center">
 		<div class="card">
@@ -62,8 +62,6 @@
 							</div>
 						</div>
 					</div>
-
-
 				</div>
 			</div>
 		</div>
