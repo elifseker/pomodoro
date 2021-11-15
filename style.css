@@ -135,6 +135,12 @@ input {
   }
 }
 
+/* date and time align left and right */
+h4 {
+  display: flex;
+  justify-content: space-between;
+}
+
 
 
 

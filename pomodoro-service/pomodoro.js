@@ -1,7 +1,7 @@
 let express = require('express');
 let app = express();
 const request = require('request');
-var cors = require('cors')
+let cors = require('cors')
 
 
 app.set('port', 8081);
@@ -14,7 +14,7 @@ app.get('/weather', function (req, res) {
     const params = '?zip=' + location
     const path = "/zip"
 
-    var requestSettings = {
+    let requestSettings = {
         url: 'https://weather-api-361.herokuapp.com' + path + params,
         method: 'GET',
         encoding: null

@@ -71,11 +71,10 @@ function getWeather() {
         req.addEventListener('load', function () {
             if (req.status >= 200 && req.status < 400) {
                 let response = JSON.parse(req.responseText);
-                //console.log(response)
-                let city = response.City
+                console.log(response)
+                let city = response.City + " "
                 let temp = Math.round(response.Temp);
-                document.getElementById('weatherResult').textContent = city;
-                document.getElementById('weatherResult').textContent = temp + "℉";
+                document.getElementById('weatherResult').textContent = city + temp + "℉";
             } else {
                 console.log("Error in network request: " + req.statusText);
             }
@@ -84,6 +83,16 @@ function getWeather() {
         event.preventDefault();
     });
 }
+
+// date 
+const dt = new Date();
+
+const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+
+document.getElementById("date").innerHTML = dt.toLocaleDateString(undefined, options);
+// time
+var tm = new Date();
+document.getElementById("time").innerHTML = tm.toLocaleTimeString();
 
 // timer
 
