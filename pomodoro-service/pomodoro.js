@@ -1,3 +1,5 @@
+// This file is for handling CORS error that weather microservice return.
+
 let express = require('express');
 let app = express();
 const request = require('request');

@@ -118,21 +118,10 @@ input {
   list-style-type: none;
 }
 
-
 /* Styles for wrapping the search box */
-
 .main {
   width: 50%;
   margin: 50px auto;
-}
-
-.card-columns {
-  @include media-breakpoint-only(lg) {
-    column-count: 4;
-  }
-  @include media-breakpoint-only(xl) {
-    column-count: 5;
-  }
 }
 
 /* date and time align left and right */

@@ -1,3 +1,7 @@
+// This file is for map microsevice. 
+// When you request a map image with location,
+//it returns png map image of that location.
+
 let express = require('express');
 let app = express();
 const request = require('request');

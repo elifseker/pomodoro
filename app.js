@@ -1,3 +1,5 @@
+// This file creates the results of user interaction in the web app. 
+
 // Create a "close" button and append it to each list item
 var myNodelist = document.getElementsByTagName("LI");
 var i;
@@ -55,8 +57,6 @@ function newElement() {
 }
 
 // weather 
-//const api = "https://weather-api-361.herokuapp.com/zip?zip="
-//const api = "https://pomodoro-map.appspot.com/weather?location="
 const api = "http://localhost:8081/weather?location="
 document.addEventListener('DOMContentLoaded', getWeather);
 
@@ -71,7 +71,6 @@ function getWeather() {
         req.addEventListener('load', function () {
             if (req.status >= 200 && req.status < 400) {
                 let response = JSON.parse(req.responseText);
-                console.log(response)
                 let city = response.City + " "
                 let temp = Math.round(response.Temp);
                 document.getElementById('weatherResult').textContent = city + temp + "℉";
@@ -86,12 +85,10 @@ function getWeather() {
 
 // date 
 const dt = new Date();
-
 const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-
 document.getElementById("date").innerHTML = dt.toLocaleDateString(undefined, options);
-// time
-var tm = new Date();
 
+// time
+const tm = new Date();
 document.getElementById("time").innerHTML = tm.toLocaleTimeString();
 
