@@ -17,6 +17,21 @@
 </head>
 
 <body>
+	<nav class="nav">
+		<div class="sticky-top container mt-auto text-center">
+			<div class="card-header">
+			</div>
+			<div class="card-body">
+				<blockquote class="blockquote mb-0">
+					<p>If you can dream it, you can do it.</p>
+					<footer class="blockquote-footer">Walt Disney</footer>
+				</blockquote>
+				<div class="card-header">
+				</div>
+			</div>
+
+		</div>
+	</nav>
 	<div class="container">
 		<h4><span id="date"></span><span id="time"></span></h4>
 	</div>
@@ -41,14 +56,13 @@
 		<div class="card">
 			<div class="card-body">
 				<h5 class="card-header bg-transparent border-success">POMODORO TIMER</h5>
-
+				<p>FOCUS AND GET THINGS DONE!</p>
 				<div id="pomodoro">
 					<div id="clock">
 						<div id="timer">
 							<div id="title">Work Time</div>
 							<div id="countdown">
-								<span id="minutes">25</span>
-								<span id="seconds">00</span>
+								<span id="worktimer">25:00<span></span>
 							</div>
 							<div id="controls" class="reset">
 								<div id="start" class="btn btn-primary"> Start</div>
@@ -57,8 +71,7 @@
 							</div>
 							<div id="title">Break Time</div>
 							<div id="countdown">
-								<span id="minutes">5</span>
-								<span id="seconds">00</span>
+								<span id="breaktimer">5:00<span></span>
 							</div>
 							<div id="controls" class="reset">
 								<div id="start" class="btn btn-primary"> Start</div>
@@ -76,34 +89,27 @@
 		<div class="card">
 			<div class="card-body">
 				<div id="myDIV" class="header">
-					<h4 class="card-header bg-transparent border-success">TO DO LIST</h5>
-						<br>
-						<input type="text" id="myInput" placeholder="add new task..">
-						<span onclick="newElement()" class="btn btn-primary">Add</span>
-						<div>
-							<ul id="myUL">
-								<li>Workout</li>
-								<li class="checked">HW4</li>
-								<li>Grocery</li>
-								<li>Leetcode</li>
-							</ul>
-						</div>
+					<h5 class="card-header bg-transparent border-success">TO DO LIST</h5>
+					<p>Don't hold your tasks in your head!</p>
+					<br>
+					<input type="text" id="myInput" placeholder="add new task..">
+					<span onclick="newElement()" class="btn btn-primary">Add</span>
+
+					<div class="container mt-4">
+						<ul id="myUL">
+							<li>Workout</li>
+							<li class="checked">HW4</li>
+							<li>Grocery</li>
+							<li>Leetcode</li>
+						</ul>
+					</div>
 				</div>
 
 			</div>
 		</div>
 	</div>
 
-	<div class="footer mt-auto text-center">
-		<div class="card-header">
-		</div>
-		<div class="card-body">
-			<blockquote class="blockquote mb-0">
-				<p>If you can dream it, you can do it.</p>
-				<footer class="blockquote-footer">Walt Disney</footer>
-			</blockquote>
-		</div>
-	</div>
+
 	<script src="app.js"></script>
 </body>
 

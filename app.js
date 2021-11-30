@@ -92,7 +92,6 @@ const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric
 document.getElementById("date").innerHTML = dt.toLocaleDateString(undefined, options);
 // time
 var tm = new Date();
-document.getElementById("time").innerHTML = tm.toLocaleTimeString();
 
-// timer
+document.getElementById("time").innerHTML = tm.toLocaleTimeString();
 
